@@ -27,8 +27,15 @@ object victoria {
 
 object comiteOlimpico {
     var valorActualEntrenador = 10
+    var medallasGanadas = 1
 
     method valorPorEntrenador(){
         return valorActualEntrenador
+    }
+    method medallasDeJudoGanadas(){
+        return medallasGanadas
+    }
+    method sumarUnaMedallaDeJudoGanada(){
+        return self.medallasDeJudoGanadas() + 1
     }
 }

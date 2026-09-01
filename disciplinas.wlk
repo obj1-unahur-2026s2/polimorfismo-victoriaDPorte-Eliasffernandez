@@ -22,13 +22,7 @@ object judo {
     var medallasGanadas = 1 
 
     method presupuestoDisciplina(){
-        return 120 * medallasDeJudoGanadas()    
-    }
-    method medallasDeJudoGanadas(){
-        return medallasGanadas
-    }
-    method sumarUnaMedallaDeJudoGanada(){
-        return self.medallasDeJudoGanadas() + 1
+        return 120 * comiteOlimpico.medallasDeJudoGanadas()    
     }
     method entrenadores(){
         return 2
