@@ -9,7 +9,21 @@ describe "test de ejercicios"{
         victoria.cambiarAltura(150)
         assert.equals(20 + 225 + 120, victoria.presupuesto())
     }
-    test""
-    test""
+    test"ahora victoria elonga con intensidad a los 210cm y practica tenis con raqueta y su presu es de"{
+        //los test se inician de cero cada uno
+        victoria.cambiarAltura(210)
+        tenis.cambiarEntrenadores(2)
+        assert.equals(20+345+215, victoria.presupuesto())
+    }
+    test "se zarpo con los invitados"{
+        victoria.cambiarCantidadDeInvitados(35)
+        assert.that(victoria.seZarpoDeInvitados())
+    }
+    test "victoria invito a sus padres y su hermanito, son en total 3"{
+        victoria.cambiarCantidadDeInvitados(3)
+        assert.notThat(victoria.seZarpoDeInvitados())
+    }
+//345 presupuesto propio
+//215 presupuesto disciplina
     
 }

@@ -37,7 +37,8 @@ object victoria {
     method presupuesto(){
         return self.presupuestoPropio() + disciplina.presupuestoDisciplina(self)
     }
-}
+    method seZarpoDeInvitados() = cantInvitados > 10
+} 
 
 object comiteOlimpico {
     var valorActualEntrenador = 10
