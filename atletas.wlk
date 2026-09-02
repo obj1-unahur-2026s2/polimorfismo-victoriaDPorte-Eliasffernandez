@@ -4,9 +4,14 @@ import elementos.*
 object victoria {
     var edadActual = 23
     var altura = 170
-    const disciplina = "tenis"
-    var elemento = ""
+    var disciplina = tenis
+    var elemento = raqueta
+    var cantInvitados = 5
     
+    method cantidadDeInvitados() = cantInvitados
+    method cambiarCantidadDeInvitados(nuevaCantidad) {
+        cantInvitados = nuevaCantidad
+    }
     method edad(){
         return edadActual
     }
@@ -14,23 +19,33 @@ object victoria {
         return altura
     }
     method cambiarDisciplina(nuevaDisciplina){
-        return disciplina = nuevaDisciplina
+        disciplina = nuevaDisciplina
     }
     method cambiarElemento(unElemento){
-        return elemento = unElemento
+        elemento = unElemento
     }
-    method presupuesto(unaDisciplina){
-        disciplinas.entrenadores() == unaDisciplina 
-
+    method cambiarAltura(nuevaAltura){
+        altura = nuevaAltura
+    }
+    method cumplirAnios(){
+        edad += 1
+    }
+    method presupuestoPropio(unaDisciplina){
+        return disciplina.entrenadores() * comiteOlimpico.valorPorEntrenador() 
+        +  elemento.costoElemento(self)
+    }
+    method presupuesto(){
+        return self.presupuestoPropio() + disciplina.presupuestoDisciplina(self)
     }
 }
 
 object comiteOlimpico {
     var valorActualEntrenador = 10
     var medallasGanadas = 1
+    var valorPorEntrenador = 10
 
-    method valorPorEntrenador(){
-        return valorActualEntrenador
+    method valorPorEntrenador(unValor){
+        valorActualEntrenador = unValor
     }
     method medallasDeJudoGanadas(){
         return medallasGanadas

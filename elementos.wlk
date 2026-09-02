@@ -3,8 +3,8 @@ import atletas.*
 object raqueta {
     var costoActual = 15
 
-    method costoElemento(unTenista){
-        return  400.min(15 * unTenista.edad())
+    method costoElemento(unDeportista){
+        return  400.min(15 * unDeportista.edad())
     }
 }
 

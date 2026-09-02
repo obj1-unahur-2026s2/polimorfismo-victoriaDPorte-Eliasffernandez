@@ -1,0 +1,15 @@
+import atletas.*
+import elementos.*
+import disciplinas.*
+
+describe "test de ejercicios"{
+    test"Victoria se quiere parecer a Pareto y su presupuesto sera de 365"{
+        victoria.cambiarDisciplina(judo)
+        victoria.cambiarElemento(judogi)
+        victoria.cambiarAltura(150)
+        assert.equals(20 + 225 + 120, victoria.presupuesto())
+    }
+    test""
+    test""
+    
+}
